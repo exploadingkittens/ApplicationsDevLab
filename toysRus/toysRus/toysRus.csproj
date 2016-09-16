@@ -208,6 +208,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ToysDB.mdf" />
+    <Content Include="App_Data\ToysDB_log.ldf">
+      <DependentUpon>ToysDB.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\toysRus.mdf" />
     <Content Include="App_Data\toysRus_log.ldf">
       <DependentUpon>toysRus.mdf</DependentUpon>
