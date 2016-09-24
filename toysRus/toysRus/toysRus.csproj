@@ -208,9 +208,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\ToysDB.mdf" />
-    <Content Include="App_Data\ToysDB_log.ldf">
-      <DependentUpon>ToysDB.mdf</DependentUpon>
+    <Content Include="App_Data\ToysDBnew.mdf" />
+    <Content Include="App_Data\ToysDBnew_log.ldf">
+      <DependentUpon>ToysDBnew.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
