@@ -3,28 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using toysRus.DataAccessLayer;
+using System.Threading.Tasks;
+using System.Data.Entity;
+
 
 namespace toysRus.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : RootController
     {
+        private Context Context { get; set; }
+
+        public HomeController(Context context)
+        {
+            Context = context;
+        }
+
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        [HttpGet][Route("ItemsInCategory/{categoryId}")]
+        public async Task<ActionResult> ItemsInCategory(int categoryId)
         {
-            ViewBag.Message = "Your application description page.";
+            var category = await Context.Categories.FirstAsync(cat => cat.ID == categoryId);
 
-            return View();
+            if (category == null)
+            {
+                AddError($"Category with id {categoryId} doesn't exist");
+            }
+
+            ViewBag.ChosenCategory = category;
+            return View("Index");
         }
 
-        public ActionResult Contact()
+        [HttpGet][Route("ClearCategory")]
+        public ActionResult ClearCategory()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }

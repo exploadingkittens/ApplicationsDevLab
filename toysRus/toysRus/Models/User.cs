@@ -7,7 +7,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace toysRus.Models
 {
-    public class User
+    public class User : IdentityUser
     {
         [DataType(DataType.Password)]
         public string Password { get; set; }
