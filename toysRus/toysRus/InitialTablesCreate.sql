@@ -28,3 +28,4 @@ insert into toys values (2,'Barbie',6,3,'',20.0,10);
 insert into toys values (3,'Batman and Robin',3,3,'',5.5,1);
 insert into toys values (4,'God of War 3',5,3,'',10.0,100);
 insert into toys values (5,'Tiger toy',1,3,'',8.5,3);
+
