@@ -241,3 +241,5 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/toysRus/toysRus/App_Data/aspnet-toysRus-20160912091841_log.ldf
+/toysRus/toysRus/App_Data/aspnet-toysRus-20160912091841.mdf
